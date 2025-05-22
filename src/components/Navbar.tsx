@@ -1,0 +1,100 @@
+
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <Link to="/" className="flex items-center">
+            <h1 className="text-2xl font-display font-black">
+              <span className="mr-1 text-amber">Fraternity</span>
+              <span className="text-cobalt">Stay</span>
+            </h1>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link to="/" className="font-medium hover:text-amber transition-colors">Home</Link>
+            <Link to="/properties" className="font-medium hover:text-amber transition-colors">Properties</Link>
+            <Link to="/community" className="font-medium hover:text-amber transition-colors">Community</Link>
+            <Link to="/about" className="font-medium hover:text-amber transition-colors">About Us</Link>
+            <Link to="/apply" className="fs-btn fs-btn-primary">Find My Tribe</Link>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button 
+            className="md:hidden text-foreground"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 z-40 bg-background pt-16">
+          <nav className="flex flex-col items-center justify-center space-y-8 h-full">
+            <Link 
+              to="/" 
+              className="text-2xl font-medium hover:text-amber transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/properties" 
+              className="text-2xl font-medium hover:text-amber transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Properties
+            </Link>
+            <Link 
+              to="/community" 
+              className="text-2xl font-medium hover:text-amber transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Community
+            </Link>
+            <Link 
+              to="/about" 
+              className="text-2xl font-medium hover:text-amber transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link 
+              to="/apply" 
+              className="fs-btn fs-btn-primary text-xl"
+              onClick={() => setIsOpen(false)}
+            >
+              Find My Tribe
+            </Link>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Navbar;
