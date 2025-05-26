@@ -21,77 +21,106 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-charcoal-900/95 backdrop-blur-md shadow-xl border-b border-charcoal-800' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-zinc-950/95 backdrop-blur-xl shadow-2xl border-b border-zinc-800' 
+        : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center group">
             <img 
               src="/lovable-uploads/dd46d21d-ffac-469b-b4e6-33b2aafec554.png" 
-              alt="Fraternity Stay" 
-              className="h-20 w-auto"
+              alt="Fraternity Stay - Where You Belong" 
+              className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="font-medium text-gray-200 hover:text-amber transition-colors">Home</Link>
-            <Link to="/properties" className="font-medium text-gray-200 hover:text-amber transition-colors">Properties</Link>
-            <Link to="/community" className="font-medium text-gray-200 hover:text-cobalt transition-colors">Community</Link>
-            <Link to="/about" className="font-medium text-gray-200 hover:text-amber transition-colors">About Us</Link>
-            <Link to="/apply" className="fs-btn fs-btn-primary font-bold">Find My Tribe</Link>
+            <Link 
+              to="/" 
+              className="font-semibold text-zinc-300 hover:text-amber-400 transition-colors duration-300 text-lg"
+            >
+              Home
+            </Link>
+            <Link 
+              to="/properties" 
+              className="font-semibold text-zinc-300 hover:text-amber-400 transition-colors duration-300 text-lg"
+            >
+              Our Yards
+            </Link>
+            <Link 
+              to="/community" 
+              className="font-semibold text-zinc-300 hover:text-blue-400 transition-colors duration-300 text-lg"
+            >
+              The Tribe
+            </Link>
+            <Link 
+              to="/about" 
+              className="font-semibold text-zinc-300 hover:text-amber-400 transition-colors duration-300 text-lg"
+            >
+              Our Story
+            </Link>
+            <Link 
+              to="/apply" 
+              className="btn-primary text-base px-6 py-3"
+            >
+              Join The Tribe
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
           <button 
-            className="md:hidden text-gray-200 hover:text-amber transition-colors"
+            className="md:hidden text-zinc-300 hover:text-amber-400 transition-colors p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-charcoal-900/98 backdrop-blur-md pt-24">
-          <nav className="flex flex-col items-center justify-center space-y-8 h-full">
+        <div className="md:hidden fixed inset-0 z-40 bg-zinc-950/98 backdrop-blur-xl">
+          <div className="flex flex-col items-center justify-center h-full space-y-8">
             <Link 
               to="/" 
-              className="text-2xl font-medium text-gray-200 hover:text-amber transition-colors"
+              className="text-3xl font-bold text-zinc-300 hover:text-amber-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/properties" 
-              className="text-2xl font-medium text-gray-200 hover:text-amber transition-colors"
+              className="text-3xl font-bold text-zinc-300 hover:text-amber-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Properties
+              Our Yards
             </Link>
             <Link 
               to="/community" 
-              className="text-2xl font-medium text-gray-200 hover:text-cobalt transition-colors"
+              className="text-3xl font-bold text-zinc-300 hover:text-blue-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Community
+              The Tribe
             </Link>
             <Link 
               to="/about" 
-              className="text-2xl font-medium text-gray-200 hover:text-amber transition-colors"
+              className="text-3xl font-bold text-zinc-300 hover:text-amber-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              About Us
+              Our Story
             </Link>
             <Link 
               to="/apply" 
-              className="fs-btn fs-btn-primary text-xl font-bold"
+              className="btn-primary text-xl px-8 py-4 mt-4"
               onClick={() => setIsOpen(false)}
             >
-              Find My Tribe
+              Join The Tribe
             </Link>
-          </nav>
+          </div>
         </div>
       )}
     </header>

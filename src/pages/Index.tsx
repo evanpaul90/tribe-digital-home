@@ -1,343 +1,294 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '@/components/AnimatedSection';
-import { ArrowRight, Users, Home, MapPin } from 'lucide-react';
+import { ArrowRight, Users, Home, MapPin, Star, ChevronDown } from 'lucide-react';
 
 const Index = () => {
   return (
     <>
-      {/* Hero Section */}
-      <section className="hero-section bg-gradient-to-br from-charcoal-900 via-charcoal-800 to-charcoal-900 text-white">
-        <div className="absolute inset-0 opacity-20 bg-[url('/images/texture.png')] mix-blend-overlay"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <AnimatedSection className="text-center max-w-4xl mx-auto">
-            <h1 className="mb-6">
-              More Than A Place To Stay.
+      {/* Hero Section - Bold & Authentic */}
+      <section className="hero-section relative overflow-hidden">
+        {/* Background texture overlay */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23f5b919" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"></div>
+        </div>
+        
+        {/* Floating elements for depth */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-amber-400/10 rounded-full animate-float"></div>
+        <div className="absolute bottom-32 right-16 w-32 h-32 bg-blue-500/10 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+        
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <div className="max-w-6xl mx-auto">
+            {/* Rally cry headline */}
+            <h1 className="mb-8 animate-slide-up">
+              Where you live changes
               <br />
-              <span className="tribal-text">A Tribe To Belong To.</span>
+              <span className="tribal-text text-glow">who you become.</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-10 text-gray-300">
-              Student co-living spaces designed for connection, growth, and belonging.
+            
+            <p className="text-xl md:text-2xl lg:text-3xl mb-12 text-zinc-400 max-w-4xl mx-auto animate-fade-in-delay font-medium">
+              This isn't just housing. It's your tribe, your growth, your story. 
+              <br className="hidden md:block" />
+              Welcome to India's boldest student living community.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/properties" className="fs-btn fs-btn-primary">
-                Find My Tribe
+            
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-20 animate-fade-in-delay">
+              <Link to="/apply" className="btn-primary group">
+                Start Your Fraternity Journey
+                <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
-              <Link to="/community" className="fs-btn fs-btn-outline">
-                Explore Community
+              <Link to="/properties" className="btn-outline">
+                Explore Our Yards
               </Link>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
-          <a href="#about" className="text-white/70 hover:text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 5v14M5 12l7 7 7-7" />
-            </svg>
-          </a>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown className="text-amber-400" size={32} />
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="section bg-charcoal-800">
+      {/* The Vibe Section */}
+      <section className="section bg-zinc-950/50">
         <div className="container mx-auto px-4">
-          <AnimatedSection className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="mb-6 text-white">What is Fraternity Stay?</h2>
-            <p className="text-lg text-gray-300">
-              We're building a new kind of student housing community —<br />
-              where belonging comes first, ambition is collective, and growth happens together.
+          <AnimatedSection className="text-center mb-20">
+            <h2 className="mb-8">
+              More than a place to crash.
+              <br />
+              <span className="brand-gradient">A vibe to live by.</span>
+            </h2>
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              We get it. You're not looking for your parents' idea of a hostel. 
+              You want freedom, community, and something that actually gets your generation.
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <AnimatedSection delay={200} className="bg-charcoal-700 p-8 rounded-lg">
-              <div className="bg-amber/10 p-4 rounded-full inline-block mb-4">
-                <Users size={32} className="text-amber" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <AnimatedSection delay={200} className="card-premium p-8 text-center">
+              <div className="w-16 h-16 bg-amber-400/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Users className="text-amber-400" size={32} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Tribal Living</h3>
-              <p className="text-gray-300">
-                Find your people in shared spaces designed for connection. From
-                community kitchens to study zones and jam rooms.
+              <h3 className="text-2xl font-bold mb-4">Your Tribe Awaits</h3>
+              <p className="text-zinc-400 text-lg">
+                Late-night chai circles, spontaneous jam sessions, and inside jokes that become legends. 
+                Find your people here.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={300} className="bg-charcoal-700 p-8 rounded-lg">
-              <div className="bg-cobalt/10 p-4 rounded-full inline-block mb-4">
-                <Home size={32} className="text-cobalt" />
+            <AnimatedSection delay={300} className="card-premium p-8 text-center">
+              <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Home className="text-blue-400" size={32} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Comfort + Style</h3>
-              <p className="text-gray-300">
-                Fully furnished spaces that feel like home, with design that inspires.
-                Safe, clean, and everything you need to thrive.
+              <h3 className="text-2xl font-bold mb-4">Spaces That Inspire</h3>
+              <p className="text-zinc-400 text-lg">
+                Think exposed brick meets neon lights. Study nooks, creative corners, 
+                and rooms that actually look like you'd want to live in them.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={400} className="bg-charcoal-700 p-8 rounded-lg">
-              <div className="bg-charcoal/10 p-4 rounded-full inline-block mb-4">
-                <MapPin size={32} className="text-charcoal-300" />
+            <AnimatedSection delay={400} className="card-premium p-8 text-center">
+              <div className="w-16 h-16 bg-amber-400/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Star className="text-amber-400" size={32} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">Prime Locations</h3>
-              <p className="text-gray-300">
-                Positioned near campuses in vibrant neighborhoods.
-                Easy access to transportation, food, and city life.
+              <h3 className="text-2xl font-bold mb-4">Growth Mode On</h3>
+              <p className="text-zinc-400 text-lg">
+                Skill swaps, startup ideas over midnight snacks, and a community 
+                that pushes you to level up every single day.
               </p>
             </AnimatedSection>
           </div>
-
-          <AnimatedSection delay={500} className="text-center mt-16">
-            <Link to="/about" className="inline-flex items-center font-medium text-cobalt hover:text-cobalt-400">
-              Learn more about our mission <ArrowRight size={16} className="ml-2" />
-            </Link>
-          </AnimatedSection>
         </div>
       </section>
 
-      {/* Properties Preview Section */}
-      <section className="section bg-charcoal-900">
+      {/* Featured Yards */}
+      <section className="section bg-gradient-to-br from-zinc-950 to-zinc-900">
         <div className="container mx-auto px-4">
-          <AnimatedSection className="mb-16">
-            <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-              <div>
-                <h2 className="mb-3 text-white">Our Yards</h2>
-                <p className="text-gray-300">
-                  Discover our uniquely designed co-living spaces
-                </p>
-              </div>
-              <Link to="/properties" className="fs-btn fs-btn-secondary mt-4 md:mt-0">
-                View All Properties
-              </Link>
-            </div>
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="mb-6">Our Yards</h2>
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              Each space has its own personality, its own vibe. 
+              Find the one that matches your energy.
+            </p>
+          </AnimatedSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Echo Yard Property */}
-              <div className="bg-charcoal-800 rounded-lg overflow-hidden shadow-md card-hover">
-                <div className="relative h-80">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+            {/* Echo Yard */}
+            <AnimatedSection delay={200} className="group">
+              <div className="card-premium overflow-hidden">
+                <div className="relative h-80 overflow-hidden">
                   <img
-                    src="/images/echo-yard.jpg"
-                    alt="Echo Yard"
-                    className="w-full h-full object-cover"
+                    src="/lovable-uploads/50bf79a9-d2b9-4b8a-9c86-d87e80c3588f.png"
+                    alt="Echo Yard - Bold community living"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">Echo Yard</h3>
-                    <div className="flex items-center text-white/90">
-                      <MapPin size={16} className="mr-1" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent"></div>
+                  <div className="absolute top-6 right-6">
+                    <span className="bg-amber-400 text-zinc-900 px-4 py-2 rounded-full font-bold text-sm">
+                      Girls Only
+                    </span>
+                  </div>
+                  <div className="absolute bottom-6 left-6">
+                    <h3 className="text-3xl font-bold mb-2">Echo Yard</h3>
+                    <div className="flex items-center text-zinc-300">
+                      <MapPin size={18} className="mr-2 text-blue-400" />
                       <span>Koramangala, Bangalore</span>
                     </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
-                      Girls Only
-                    </span>
-                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
-                      Rooftop Lounge
-                    </span>
-                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
-                      Co-working
-                    </span>
+                
+                <div className="p-8">
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    {['Creative Hub', 'Rooftop Vibes', 'Study Pods'].map((tag) => (
+                      <span key={tag} className="bg-zinc-800 text-zinc-300 px-4 py-2 rounded-lg text-sm font-medium border border-zinc-700">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <p className="text-gray-300 mb-4">
-                    A vibrant girls-only community with stylish rooms, creative common spaces,
-                    and a rooftop lounge perfect for sunset hangouts.
+                  
+                  <p className="text-zinc-400 text-lg mb-6 leading-relaxed">
+                    Where bold ideas meet bolder friendships. Echo Yard isn't just girls-only housing — 
+                    it's a creative sanctuary with rooftop hangouts and spaces designed for connection.
                   </p>
-                  <Link
-                    to="/properties/echo-yard"
-                    className="inline-flex items-center font-medium text-cobalt hover:text-cobalt-400"
+                  
+                  <Link 
+                    to="/properties/echo-yard" 
+                    className="inline-flex items-center text-amber-400 font-semibold text-lg hover:text-amber-300 transition-colors group"
                   >
-                    Explore Echo Yard <ArrowRight size={16} className="ml-2" />
+                    Explore Echo Yard 
+                    <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
+            </AnimatedSection>
 
-              {/* Arcade House Property */}
-              <div className="bg-charcoal-800 rounded-lg overflow-hidden shadow-md card-hover">
-                <div className="relative h-80">
+            {/* Arcade House */}
+            <AnimatedSection delay={300} className="group">
+              <div className="card-premium overflow-hidden">
+                <div className="relative h-80 overflow-hidden">
                   <img
-                    src="/images/arcade-house.jpg"
-                    alt="Arcade House"
-                    className="w-full h-full object-cover"
+                    src="/lovable-uploads/50bf79a9-d2b9-4b8a-9c86-d87e80c3588f.png"
+                    alt="Arcade House - Co-ed creativity"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">Arcade House</h3>
-                    <div className="flex items-center text-white/90">
-                      <MapPin size={16} className="mr-1" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent"></div>
+                  <div className="absolute top-6 right-6">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full font-bold text-sm">
+                      Co-Ed
+                    </span>
+                  </div>
+                  <div className="absolute bottom-6 left-6">
+                    <h3 className="text-3xl font-bold mb-2">Arcade House</h3>
+                    <div className="flex items-center text-zinc-300">
+                      <MapPin size={18} className="mr-2 text-blue-400" />
                       <span>Indiranagar, Bangalore</span>
                     </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
-                      Co-Ed
-                    </span>
-                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
-                      Game Room
-                    </span>
-                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
-                      Music Studio
-                    </span>
+                
+                <div className="p-8">
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    {['Music Studio', 'Game Zone', 'Co-working'].map((tag) => (
+                      <span key={tag} className="bg-zinc-800 text-zinc-300 px-4 py-2 rounded-lg text-sm font-medium border border-zinc-700">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <p className="text-gray-300 mb-4">
-                    Our flagship co-ed property featuring a game room, music studio,
-                    and community spaces designed for creativity and connection.
+                  
+                  <p className="text-zinc-400 text-lg mb-6 leading-relaxed">
+                    Our flagship space where music meets code and creativity has no limits. 
+                    Game rooms, recording studios, and co-working spaces that fuel late-night breakthroughs.
                   </p>
-                  <Link
-                    to="/properties/arcade-house"
-                    className="inline-flex items-center font-medium text-cobalt hover:text-cobalt-400"
+                  
+                  <Link 
+                    to="/properties/arcade-house" 
+                    className="inline-flex items-center text-blue-400 font-semibold text-lg hover:text-blue-300 transition-colors group"
                   >
-                    Explore Arcade House <ArrowRight size={16} className="ml-2" />
+                    Explore Arcade House 
+                    <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Community Section */}
-      <section className="section bg-charcoal-900 text-white">
-        <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
-            <h2 className="mb-6">Join The Tribe</h2>
-            <p className="text-lg text-gray-300">
-              Fraternity Stay is more than just housing—it's a community of like-minded students
-              building connections that last beyond college.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <AnimatedSection delay={200} className="bg-charcoal-800 p-6 rounded-lg">
-              <img
-                src="/images/community-1.jpg"
-                alt="Community dinner"
-                className="w-full h-48 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold mb-2">Weekly Dinners</h3>
-              <p className="text-gray-400">
-                Community-style dinners where everyone contributes and connects.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={300} className="bg-charcoal-800 p-6 rounded-lg">
-              <img
-                src="/images/community-2.jpg"
-                alt="Skill workshops"
-                className="w-full h-48 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold mb-2">Skill Workshops</h3>
-              <p className="text-gray-400">
-                Learn from each other through regular skill-sharing sessions and workshops.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={400} className="bg-charcoal-800 p-6 rounded-lg">
-              <img
-                src="/images/community-3.jpg"
-                alt="Weekend trips"
-                className="w-full h-48 object-cover rounded-md mb-4"
-              />
-              <h3 className="text-xl font-bold mb-2">Weekend Adventures</h3>
-              <p className="text-gray-400">
-                From city explorations to weekend getaways, adventure is better together.
-              </p>
             </AnimatedSection>
           </div>
 
-          <AnimatedSection delay={500} className="text-center">
-            <Link to="/community" className="fs-btn fs-btn-primary">
-              Explore Our Community
+          <AnimatedSection delay={500} className="text-center mt-16">
+            <Link to="/properties" className="btn-secondary">
+              See All Our Yards
             </Link>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="section bg-charcoal-800">
+      {/* Real Stories Section */}
+      <section className="section bg-zinc-950">
         <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
-            <h2 className="mb-6 text-white">The Tribe Speaks</h2>
-            <p className="text-lg text-gray-300">
-              Hear what our community members have to say about life at Fraternity Stay.
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="mb-6">Real Stories, Real Growth</h2>
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what happens when you find your tribe.
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimatedSection delay={200} className="bg-charcoal-700 p-8 rounded-lg">
-              <div className="mb-6">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.5 2.5H5C3.61929 2.5 2.5 3.61929 2.5 5V12.5C2.5 13.8807 3.61929 15 5 15H12.5C13.8807 15 15 13.8807 15 12.5V5C15 3.61929 13.8807 2.5 12.5 2.5Z" fill="#F5B919"/>
-                  <path d="M27.5 2.5H20C18.6193 2.5 17.5 3.61929 17.5 5V12.5C17.5 13.8807 18.6193 15 20 15H27.5C28.8807 15 30 13.8807 30 12.5V5C30 3.61929 28.8807 2.5 27.5 2.5Z" fill="#F5B919"/>
-                </svg>
-              </div>
-              <p className="text-lg mb-6 italic text-gray-300">
-                "I never thought student housing could feel like actual community. The events, the 
-                people, the spaces - it's all designed for us to connect. Found my best friends here."
-              </p>
-              <div className="flex items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <AnimatedSection delay={200} className="glass-card p-8">
+              <div className="flex items-center mb-6">
                 <img
-                  src="/images/testimonial-1.jpg"
-                  alt="Testimonial"
-                  className="w-12 h-12 rounded-full object-cover mr-4"
+                  src="/lovable-uploads/50bf79a9-d2b9-4b8a-9c86-d87e80c3588f.png"
+                  alt="Ananya's story"
+                  className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-amber-400"
                 />
                 <div>
-                  <h4 className="font-bold">Ananya S.</h4>
-                  <p className="text-sm text-gray-500">Echo Yard Resident</p>
+                  <h4 className="font-bold text-lg">Ananya S.</h4>
+                  <p className="text-zinc-400">Echo Yard • Computer Science</p>
                 </div>
               </div>
+              <blockquote className="text-lg text-zinc-300 leading-relaxed italic">
+                "I came here thinking I just needed a place to stay. I found my co-founder, 
+                my best friends, and honestly? The confidence to build something I never 
+                thought I could. This place doesn't just house you — it changes you."
+              </blockquote>
             </AnimatedSection>
 
-            <AnimatedSection delay={300} className="bg-charcoal-700 p-8 rounded-lg">
-              <div className="mb-6">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.5 2.5H5C3.61929 2.5 2.5 3.61929 2.5 5V12.5C2.5 13.8807 3.61929 15 5 15H12.5C13.8807 15 15 13.8807 15 12.5V5C15 3.61929 13.8807 2.5 12.5 2.5Z" fill="#468DCB"/>
-                  <path d="M27.5 2.5H20C18.6193 2.5 17.5 3.61929 17.5 5V12.5C17.5 13.8807 18.6193 15 20 15H27.5C28.8807 15 30 13.8807 30 12.5V5C30 3.61929 28.8807 2.5 27.5 2.5Z" fill="#468DCB"/>
-                </svg>
-              </div>
-              <p className="text-lg mb-6 italic text-gray-300">
-                "Moving to Arcade House was the best decision I made for college. The music studio 
-                has become my second home, and I've collaborated with people I would never have met otherwise."
-              </p>
-              <div className="flex items-center">
+            <AnimatedSection delay={300} className="glass-card p-8">
+              <div className="flex items-center mb-6">
                 <img
-                  src="/images/testimonial-2.jpg"
-                  alt="Testimonial"
-                  className="w-12 h-12 rounded-full object-cover mr-4"
+                  src="/lovable-uploads/50bf79a9-d2b9-4b8a-9c86-d87e80c3588f.png"
+                  alt="Rohan's story"
+                  className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-blue-400"
                 />
                 <div>
-                  <h4 className="font-bold">Rohan K.</h4>
-                  <p className="text-sm text-gray-500">Arcade House Resident</p>
+                  <h4 className="font-bold text-lg">Rohan K.</h4>
+                  <p className="text-zinc-400">Arcade House • Music Production</p>
                 </div>
               </div>
+              <blockquote className="text-lg text-zinc-300 leading-relaxed italic">
+                "The music studio here became my second home. I've collaborated with people 
+                from completely different fields and it's opened doors I didn't even know existed. 
+                Plus, where else can you record at 2 AM without complaints?"
+              </blockquote>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section bg-gradient-to-br from-amber to-amber-400 text-charcoal-900">
-        <div className="container mx-auto px-4">
-          <AnimatedSection className="text-center max-w-4xl mx-auto">
-            <h2 className="mb-6">Ready to Find Your Tribe?</h2>
-            <p className="text-xl mb-10">
-              Join Fraternity Stay and become part of a community that grows together.
+      {/* CTA Section - Bold and Direct */}
+      <section className="section bg-gradient-to-br from-amber-400 to-amber-500 text-zinc-900">
+        <div className="container mx-auto px-4 text-center">
+          <AnimatedSection>
+            <h2 className="mb-8 text-zinc-900">Your Chapter Awaits</h2>
+            <p className="text-xl mb-12 max-w-3xl mx-auto font-medium text-zinc-800">
+              Stop scrolling. Start living. Your tribe is waiting, your story is calling, 
+              and your best college years are one application away.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/apply" className="fs-btn bg-charcoal-900 text-white hover:bg-charcoal-800">
-                Apply Now
+            <div className="flex flex-col md:flex-row gap-6 justify-center">
+              <Link to="/apply" className="bg-zinc-900 text-white px-10 py-5 rounded-xl text-xl font-bold transition-all duration-300 hover:bg-zinc-800 hover:scale-105 hover:shadow-2xl shadow-zinc-900/20">
+                Begin My Stay
               </Link>
-              <Link to="/properties" className="fs-btn border-2 border-charcoal-900 text-charcoal-900 hover:bg-charcoal-900/10">
-                Explore Properties
+              <Link to="/community" className="border-3 border-zinc-900 text-zinc-900 px-10 py-5 rounded-xl text-xl font-bold transition-all duration-300 hover:bg-zinc-900 hover:text-white hover:scale-105">
+                Meet The Tribe
               </Link>
             </div>
           </AnimatedSection>
