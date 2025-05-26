@@ -25,10 +25,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <h1 className="text-2xl font-display font-black">
-              <span className="mr-1 text-amber">Fraternity</span>
-              <span className="text-cobalt">Stay</span>
-            </h1>
+            <img 
+              src="/lovable-uploads/50bf79a9-d2b9-4b8a-9c86-d87e80c3588f.png" 
+              alt="Fraternity Stay" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -9,10 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
           <div>
             <Link to="/" className="inline-block mb-6">
-              <h3 className="text-2xl font-display font-black">
-                <span className="mr-1 text-amber">Fraternity</span>
-                <span className="text-cobalt">Stay</span>
-              </h3>
+              <img 
+                src="/lovable-uploads/50bf79a9-d2b9-4b8a-9c86-d87e80c3588f.png" 
+                alt="Fraternity Stay" 
+                className="h-16 w-auto"
+              />
             </Link>
             <p className="text-gray-400 mb-6">More than just a place to stay. A community to belong to.</p>
           </div>
