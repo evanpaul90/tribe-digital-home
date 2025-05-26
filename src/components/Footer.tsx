@@ -12,7 +12,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/50bf79a9-d2b9-4b8a-9c86-d87e80c3588f.png" 
                 alt="Fraternity Stay" 
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
             <p className="text-gray-400 mb-6">More than just a place to stay. A community to belong to.</p>

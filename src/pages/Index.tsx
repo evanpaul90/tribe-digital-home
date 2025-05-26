@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -50,45 +49,45 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section bg-white">
+      <section id="about" className="section bg-charcoal-800">
         <div className="container mx-auto px-4">
           <AnimatedSection className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="mb-6">What is Fraternity Stay?</h2>
-            <p className="text-lg text-gray-600">
+            <h2 className="mb-6 text-white">What is Fraternity Stay?</h2>
+            <p className="text-lg text-gray-300">
               We're building a new kind of student housing community —<br />
               where belonging comes first, ambition is collective, and growth happens together.
             </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <AnimatedSection delay={200} className="bg-gray-50 p-8 rounded-lg">
+            <AnimatedSection delay={200} className="bg-charcoal-700 p-8 rounded-lg">
               <div className="bg-amber/10 p-4 rounded-full inline-block mb-4">
                 <Users size={32} className="text-amber" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Tribal Living</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-3 text-white">Tribal Living</h3>
+              <p className="text-gray-300">
                 Find your people in shared spaces designed for connection. From
                 community kitchens to study zones and jam rooms.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={300} className="bg-gray-50 p-8 rounded-lg">
+            <AnimatedSection delay={300} className="bg-charcoal-700 p-8 rounded-lg">
               <div className="bg-cobalt/10 p-4 rounded-full inline-block mb-4">
                 <Home size={32} className="text-cobalt" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Comfort + Style</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-3 text-white">Comfort + Style</h3>
+              <p className="text-gray-300">
                 Fully furnished spaces that feel like home, with design that inspires.
                 Safe, clean, and everything you need to thrive.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={400} className="bg-gray-50 p-8 rounded-lg">
+            <AnimatedSection delay={400} className="bg-charcoal-700 p-8 rounded-lg">
               <div className="bg-charcoal/10 p-4 rounded-full inline-block mb-4">
-                <MapPin size={32} className="text-charcoal" />
+                <MapPin size={32} className="text-charcoal-300" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Prime Locations</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-3 text-white">Prime Locations</h3>
+              <p className="text-gray-300">
                 Positioned near campuses in vibrant neighborhoods.
                 Easy access to transportation, food, and city life.
               </p>
@@ -96,7 +95,7 @@ const Index = () => {
           </div>
 
           <AnimatedSection delay={500} className="text-center mt-16">
-            <Link to="/about" className="inline-flex items-center font-medium text-cobalt hover:text-cobalt-600">
+            <Link to="/about" className="inline-flex items-center font-medium text-cobalt hover:text-cobalt-400">
               Learn more about our mission <ArrowRight size={16} className="ml-2" />
             </Link>
           </AnimatedSection>
@@ -104,13 +103,13 @@ const Index = () => {
       </section>
 
       {/* Properties Preview Section */}
-      <section className="section bg-gray-100">
+      <section className="section bg-charcoal-900">
         <div className="container mx-auto px-4">
           <AnimatedSection className="mb-16">
             <div className="flex flex-col md:flex-row justify-between items-center mb-10">
               <div>
-                <h2 className="mb-3">Our Yards</h2>
-                <p className="text-gray-600">
+                <h2 className="mb-3 text-white">Our Yards</h2>
+                <p className="text-gray-300">
                   Discover our uniquely designed co-living spaces
                 </p>
               </div>
@@ -121,7 +120,7 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Echo Yard Property */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+              <div className="bg-charcoal-800 rounded-lg overflow-hidden shadow-md card-hover">
                 <div className="relative h-80">
                   <img
                     src="/images/echo-yard.jpg"
@@ -138,23 +137,23 @@ const Index = () => {
                 </div>
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-gray-100 text-charcoal-700 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
                       Girls Only
                     </span>
-                    <span className="bg-gray-100 text-charcoal-700 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
                       Rooftop Lounge
                     </span>
-                    <span className="bg-gray-100 text-charcoal-700 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
                       Co-working
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-300 mb-4">
                     A vibrant girls-only community with stylish rooms, creative common spaces,
                     and a rooftop lounge perfect for sunset hangouts.
                   </p>
                   <Link
                     to="/properties/echo-yard"
-                    className="inline-flex items-center font-medium text-cobalt hover:text-cobalt-600"
+                    className="inline-flex items-center font-medium text-cobalt hover:text-cobalt-400"
                   >
                     Explore Echo Yard <ArrowRight size={16} className="ml-2" />
                   </Link>
@@ -162,7 +161,7 @@ const Index = () => {
               </div>
 
               {/* Arcade House Property */}
-              <div className="bg-white rounded-lg overflow-hidden shadow-md card-hover">
+              <div className="bg-charcoal-800 rounded-lg overflow-hidden shadow-md card-hover">
                 <div className="relative h-80">
                   <img
                     src="/images/arcade-house.jpg"
@@ -179,23 +178,23 @@ const Index = () => {
                 </div>
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-gray-100 text-charcoal-700 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
                       Co-Ed
                     </span>
-                    <span className="bg-gray-100 text-charcoal-700 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
                       Game Room
                     </span>
-                    <span className="bg-gray-100 text-charcoal-700 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-charcoal-700 text-gray-300 px-3 py-1 rounded-full text-xs font-medium">
                       Music Studio
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-300 mb-4">
                     Our flagship co-ed property featuring a game room, music studio,
                     and community spaces designed for creativity and connection.
                   </p>
                   <Link
                     to="/properties/arcade-house"
-                    className="inline-flex items-center font-medium text-cobalt hover:text-cobalt-600"
+                    className="inline-flex items-center font-medium text-cobalt hover:text-cobalt-400"
                   >
                     Explore Arcade House <ArrowRight size={16} className="ml-2" />
                   </Link>
@@ -264,24 +263,24 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="section bg-white">
+      <section className="section bg-charcoal-800">
         <div className="container mx-auto px-4">
           <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
-            <h2 className="mb-6">The Tribe Speaks</h2>
-            <p className="text-lg text-gray-600">
+            <h2 className="mb-6 text-white">The Tribe Speaks</h2>
+            <p className="text-lg text-gray-300">
               Hear what our community members have to say about life at Fraternity Stay.
             </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimatedSection delay={200} className="bg-gray-50 p-8 rounded-lg">
+            <AnimatedSection delay={200} className="bg-charcoal-700 p-8 rounded-lg">
               <div className="mb-6">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.5 2.5H5C3.61929 2.5 2.5 3.61929 2.5 5V12.5C2.5 13.8807 3.61929 15 5 15H12.5C13.8807 15 15 13.8807 15 12.5V5C15 3.61929 13.8807 2.5 12.5 2.5Z" fill="#F5B919"/>
                   <path d="M27.5 2.5H20C18.6193 2.5 17.5 3.61929 17.5 5V12.5C17.5 13.8807 18.6193 15 20 15H27.5C28.8807 15 30 13.8807 30 12.5V5C30 3.61929 28.8807 2.5 27.5 2.5Z" fill="#F5B919"/>
                 </svg>
               </div>
-              <p className="text-lg mb-6 italic">
+              <p className="text-lg mb-6 italic text-gray-300">
                 "I never thought student housing could feel like actual community. The events, the 
                 people, the spaces - it's all designed for us to connect. Found my best friends here."
               </p>
@@ -298,14 +297,14 @@ const Index = () => {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={300} className="bg-gray-50 p-8 rounded-lg">
+            <AnimatedSection delay={300} className="bg-charcoal-700 p-8 rounded-lg">
               <div className="mb-6">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.5 2.5H5C3.61929 2.5 2.5 3.61929 2.5 5V12.5C2.5 13.8807 3.61929 15 5 15H12.5C13.8807 15 15 13.8807 15 12.5V5C15 3.61929 13.8807 2.5 12.5 2.5Z" fill="#468DCB"/>
                   <path d="M27.5 2.5H20C18.6193 2.5 17.5 3.61929 17.5 5V12.5C17.5 13.8807 18.6193 15 20 15H27.5C28.8807 15 30 13.8807 30 12.5V5C30 3.61929 28.8807 2.5 27.5 2.5Z" fill="#468DCB"/>
                 </svg>
               </div>
-              <p className="text-lg mb-6 italic">
+              <p className="text-lg mb-6 italic text-gray-300">
                 "Moving to Arcade House was the best decision I made for college. The music studio 
                 has become my second home, and I've collaborated with people I would never have met otherwise."
               </p>
