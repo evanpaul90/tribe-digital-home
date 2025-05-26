@@ -74,11 +74,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-charcoal-900 text-gray-100;
+    @apply bg-gray-50 text-charcoal-900;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold text-white;
+    @apply font-display font-bold text-charcoal-900;
   }
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl;
@@ -90,7 +90,7 @@
     @apply text-2xl md:text-3xl;
   }
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-gray-700;
   }
 }
 
@@ -112,19 +112,19 @@
   }
   
   .fs-btn-primary {
-    @apply bg-amber text-charcoal-900 hover:bg-amber-600;
+    @apply bg-amber text-charcoal-900 hover:bg-amber-600 shadow-md;
   }
   
   .fs-btn-secondary {
-    @apply bg-cobalt text-white hover:bg-cobalt-600;
+    @apply bg-cobalt text-white hover:bg-cobalt-600 shadow-md;
   }
   
   .fs-btn-outline {
-    @apply border-2 border-amber text-amber hover:bg-amber hover:text-charcoal-900;
+    @apply border-2 border-amber text-amber hover:bg-amber hover:text-charcoal-900 shadow-md;
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
   
   .animate-on-scroll {
